@@ -1,0 +1,215 @@
+:root {
+    --color-blue: #0A3871;
+    --color-grey: #495057;
+    --color-greyDark: #343A40;
+    --color-lightBlue: #F3F5FC;
+    --color-lightBlue2: #D8DFE8;
+}
+
+/* Estilos generales */
+body {
+    background-color: var(--color-lightBlue);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: var(--color-greyDark);
+}
+
+button {
+    cursor: pointer;
+}
+
+/* Barra de scroll */
+*::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+*::-webkit-scrollbar:vertical {
+    width: 8px;
+    background: none;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--color-blue);
+    border-radius: 20px;
+}
+
+/* Header */
+header {
+    width: 100%;
+    height: 70px;
+    background: #fff;
+}
+
+.contenedorEncabezado {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.contenedorEncabezado .logo {
+    max-height: 50px;
+}
+
+/* Main */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px;
+}
+
+.left, .right {
+    width: 48%;
+}
+
+.entradaTexto, .textoResultado {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    outline: none;
+    border-radius: 24px;
+    font-size: 24px;
+    background-color: var(--color-lightBlue);
+    color: var(--color-blue);
+    resize: none;
+    height: 200px;
+    font-family: 'Inter', sans-serif;
+}
+
+.entradaTexto::placeholder, .textoResultado::placeholder {
+    color: var(--color-blue);
+}
+
+.informacion {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    color: var(--color-grey);
+    margin-top: 10px;
+}
+
+.informacion img {
+    width: 20px;
+    height: 20px;
+}
+
+.grupoBotones {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.btnFuncionalidad {
+    width: 48%;
+    padding: 15px;
+    border-radius: 24px;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+    background-color: var(--color-blue);
+    border: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btnFuncionalidad:hover {
+    transform: translateY(-2px);
+}
+
+#btnDesencriptar {
+    background-color: var(--color-lightBlue2);
+    color: var(--color-blue);
+}
+
+#btnCopiar {
+    background-color: transparent;
+    color: var(--color-blue);
+    border: 1px solid var(--color-blue);
+    display: none;
+}
+
+/* Implementación del Muñeco */
+.mascota {
+    width: 100%;
+    margin: 20px auto;
+    display: block;
+    max-width: 300px;
+}
+
+.informacionTexto {
+    text-align: center;
+    color: var(--color-greyDark);
+    margin-top: 20px;
+}
+
+.oculto {
+    display: none;
+}
+
+/* Footer */
+.piePagina {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 15px 0;
+    border-top: 1px solid #e6e6e6;
+    font-size: 0.85rem;
+    color: var(--color-grey);
+}
+
+/* Estilos responsivos */
+@media screen and (max-width: 840px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left, .right {
+        width: 100%;
+    }
+
+    .entradaTexto, .textoResultado {
+        height: 180px;
+        font-size: 20px;
+    }
+
+    .btnFuncionalidad {
+        width: 100%;
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .mascota {
+        max-width: 200px;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .entradaTexto, .textoResultado {
+        height: 120px;
+        font-size: 18px;
+    }
+
+    .btnFuncionalidad {
+        width: 100%;
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    .mascota {
+        max-width: 150px;
+    }
+}

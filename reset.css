@@ -1,0 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+    line-height: 1.3;
+    font-family: 'Inter', sans-serif;
+}
